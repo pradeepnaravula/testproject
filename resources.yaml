@@ -29,4 +29,4 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: us-central1-docker.pkg.dev/calm-magpie-397107/demojob/nginx:latest
+        image: uus-central1-docker.pkg.dev/invertible-hook-406706/test-gcp/nginx:latest
