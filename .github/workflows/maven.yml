@@ -65,6 +65,6 @@ jobs:
         CLUSTER_NAME: ${{ secrets.GKE_CLUSTER}}
         ZONE_NAME: ${{ secrets.GKE_ZONE}}
       with:
-        args: apply -f resources.yaml/
+        args: kubectl apply -f resources.yaml/
     
 
