@@ -53,18 +53,4 @@ jobs:
         docker build -t us-central1-docker.pkg.dev/invertible-hook-406706/test-gcp/nginx:latest .
         docker push us-central1-docker.pkg.dev/invertible-hook-406706/test-gcp/nginx:latest
  
-  deploy-job:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@main
-    - name: kubectl - Google Cloud GKE cluster.
-      uses: mnagaraju5628/Inno-testproject@main
-      env:
-        PROJECT_ID: ${{ secrets.PROJECT_ID }}
-        APPLICATION_CREDENTIALS: ${{ secrets.GKE_SA_KEY }}
-        CLUSTER_NAME: ${{ secrets.GKE_CLUSTER}}
-        ZONE_NAME: ${{ secrets.GKE_ZONE}}
-      with:
-        args: kubectl apply -f resources.yaml/
-    
 
